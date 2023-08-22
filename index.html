@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RGB SLider Vue.js App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click="reverseMessage">Reverse Message</button>
+    <button @click="incrementCounter">Increment Counter</button>
+    <p>{{ repeatedMessage }}</p>
+    <div id="colorField" @mousedown="startDrag" @mousemove="drag" @mouseup="stopDrag">
+      <div id="slider" :style="{ left: x + 'px', top: y + 'px' }"></div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
